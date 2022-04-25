@@ -1,0 +1,3673 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Dependency Analysis",
+          "semanticVersion": "0.3.261602",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA103",
+              "name": "ReferenceToBeDeleted",
+              "fullDescription": {
+                "text": "References that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA106",
+              "name": "PackageToBeAdded",
+              "fullDescription": {
+                "text": "Packages that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA108",
+              "name": "FrameworkReferenceToBeAdded",
+              "fullDescription": {
+                "text": "Framework Reference that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.DynamicData needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Entity needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.ApplicationServices needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Extensions needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Abstractions needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Routing needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Services needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Net.Http.WebRequest needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Helpers needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Mvc needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Optimization needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.Razor needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.WebPages needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.WebPages.Deployment needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "message": {
+            "text": "Reference to System.Web.WebPages.Razor needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package System.Net.Http, Version=4.3.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.3.261602 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA108",
+          "message": {
+            "text": "Framework Reference to Microsoft.AspNetCore.App needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/PokerMVC.vbproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "API Upgradability",
+          "semanticVersion": "0.3.261602",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA0002",
+              "fullDescription": {
+                "text": "Types should be upgraded"
+              },
+              "helpUri": "about:blank"
+            },
+            {
+              "id": "UA0013_G",
+              "fullDescription": {
+                "text": "Replace usage of Microsoft.AspNet.Identity, Microsoft.AspNet.Identity.UserManager`2, Microsoft.AspNet.Identity.Owin.SignInManager`2"
+              },
+              "helpUri": "about:blank"
+            },
+            {
+              "id": "UA0013_C",
+              "fullDescription": {
+                "text": "Replace usage of System.Web.Optimization.BundleCollection"
+              },
+              "helpUri": "about:blank"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/HomeController.vb"
+                },
+                "region": {
+                  "startLine": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/HomeController.vb"
+                },
+                "region": {
+                  "startLine": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/HomeController.vb"
+                },
+                "region": {
+                  "startLine": 23
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 415
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 11
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 44
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 81
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 54
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 98
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 122
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 131
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 159
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 170
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 179
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 201
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 208
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 237
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 217
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 246
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 256
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 278
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 297
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 330
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 364
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 372
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 407
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/AccountController.vb"
+                },
+                "region": {
+                  "startLine": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 55
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 66
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 78
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 108
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 96
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 35
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 124
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 110
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamsController.vb"
+                },
+                "region": {
+                  "startLine": 80
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 38
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 50
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 64
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 83
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 66
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 96
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 98
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TopHandsController.vb"
+                },
+                "region": {
+                  "startLine": 112
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 37
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 60
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 90
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 48
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 78
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 105
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 62
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/TeamNightOverridesController.vb"
+                },
+                "region": {
+                  "startLine": 92
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 24
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 37
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 26
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 56
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 73
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 75
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 92
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 105
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 121
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ScoresController.vb"
+                },
+                "region": {
+                  "startLine": 107
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 29
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 71
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 38
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 96
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 83
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 115
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 98
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 128
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 144
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/RSVPsController.vb"
+                },
+                "region": {
+                  "startLine": 130
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 54
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 56
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 66
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 76
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 86
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 93
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 130
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 132
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 147
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 158
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 160
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/PlayersController.vb"
+                },
+                "region": {
+                  "startLine": 174
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 24
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 45
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 55
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 66
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 83
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 68
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 94
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 96
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/NightsController.vb"
+                },
+                "region": {
+                  "startLine": 110
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 38
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 54
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 76
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 95
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 78
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 108
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 110
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/MembershipsController.vb"
+                },
+                "region": {
+                  "startLine": 124
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 24
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 36
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 48
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 60
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 78
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 90
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 106
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 62
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/GamesController.vb"
+                },
+                "region": {
+                  "startLine": 92
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 58
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 40
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 77
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 85
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 107
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 120
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 131
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 166
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 143
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 184
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 192
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 212
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 220
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 260
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 241
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 267
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ManageController.vb"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 25
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 97
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 37
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 27
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 46
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 56
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 58
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 72
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 82
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0002",
+          "message": {
+            "text": "This type is not supported on .NET Core/.NET 5+ and should be replaced with a modern equivalent."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Controllers/ApplicationUsersController.vb"
+                },
+                "region": {
+                  "startLine": 84
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/IdentityConfig.vb"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/IdentityConfig.vb"
+                },
+                "region": {
+                  "startLine": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/IdentityConfig.vb"
+                },
+                "region": {
+                  "startLine": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/IdentityConfig.vb"
+                },
+                "region": {
+                  "startLine": 84
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/Startup.Auth.vb"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/Startup.Auth.vb"
+                },
+                "region": {
+                  "startLine": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/Startup.Auth.vb"
+                },
+                "region": {
+                  "startLine": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Models/DAL.vb"
+                },
+                "region": {
+                  "startLine": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Models/IdentityModels.vb"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Models/IdentityModels.vb"
+                },
+                "region": {
+                  "startLine": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Models/IdentityModels.vb"
+                },
+                "region": {
+                  "startLine": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_G",
+          "message": {
+            "text": "ASP.NET identity should be replaced with ASP.NET Core identity. For more details, see https://docs.microsoft.com/aspnet/core/migration/identity"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/Models/ManageViewModels.vb"
+                },
+                "region": {
+                  "startLine": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA0013_C",
+          "message": {
+            "text": "Script and style bundling works differently in ASP.NET Core. BundleCollection should be replaced by alternative bundling technologies. https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/OneDrive/Documents/Programming/PokerMVC/PokerMVC/App_Start/BundleConfig.vb"
+                },
+                "region": {
+                  "startLine": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}
