@@ -337,6 +337,10 @@ Namespace Models
                 Return RawScore + BonusScore
             End Get
         End Property
+        Public Overrides Function ToString() As String
+            Return String.Format("{0}, {1:d} - {2:N}", Player.ToString, Game.Night.Scheduled, RawScore + BonusScore)
+        End Function
+
     End Class
     Public Class TopHand
         Public Property ID As Integer
@@ -389,9 +393,11 @@ Namespace Models
     Public Class PlayerView
         Public Property Player As Player
         Public Property Rank As Integer
-        Public Property LastRank As Integer
-
         Public Property TeamBonus As Double
+        Public Property Top8 As Double
+        Public Property TopHands As Integer
+        Public Property Attendance As Integer
+
     End Class
     Public Class PlayerSelect
         Public Property Player As Player
@@ -408,6 +414,21 @@ Namespace Models
     Public Class Table
         Public Property Seq As Integer
         Public Property Players As IEnumerable(Of Player)
+    End Class
+    Public Class TeamTableView
+        Public Property Night As Night
+        Public Property Team As Team
+        Public Property TeamScore As Double
+        Public Property Attendance As Integer
+        Public Property GrossScore As Double
+        Public Property Bonus As Double
+
+    End Class
+
+    Public Class TeamBonusView
+        Public Property Player As Player
+
+        Public Property Bonus As Double
     End Class
 #End Region
 End Namespace

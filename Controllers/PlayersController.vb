@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Collections.Generic
 Imports System.Data
+Imports System.Diagnostics
 Imports System.Data.Entity
 Imports System.Linq
 Imports System.Net
@@ -17,37 +18,96 @@ Namespace Controllers
 
         ' GET: Players
         Function Index(ByVal sortOrder As String, ByVal Desc As Boolean?) As ActionResult
-            Dim intermed = db.Players.Include("TopHands").Include("Scores.Game.Night").ToList.OrderByDescending(Function(p) p.GetTopScores(25))
-            Dim result As IEnumerable(Of PlayerView)
-            result = intermed.Select(Function(p) New PlayerView With {.Player = p, .Rank = intermed.Count(Function(i) i.GetTopScores(25) > p.GetTopScores(25)) + 1, .LastRank = .Rank, .TeamBonus = p.GetTeamBonus})
-            'If db.Nights.ToList.Where(Function(n) n.Scheduled < Today).Count > 1 Then
-            '    lastnight = db.Nights.ToList.Where(Function(n) n.Scheduled < Today).OrderByDescending(Function(n) n.Scheduled).Take(2).Skip(1).First
-            '    result = intermed.Select(Function(p) New PlayerView With {.Player = p, .Rank = intermed.Count(Function(i) i.GetTopScores(25) > p.GetTopScores(25)) + 1, .LastRank = intermed.Count(Function(i) i.GetTopScores(25, lastnight.Scheduled) > p.GetTopScores(25, lastnight.Scheduled)) + 1})
-            'Else
-            '    result = intermed.Select(Function(p) New PlayerView With {.Player = p, .Rank = intermed.Count(Function(i) i.GetTopScores(25) > p.GetTopScores(25)) + 1, .LastRank = .Rank})
-            'End If
+
+
+            Dim result = From s In db.Scores.Include("Game.Night")
+                         From tm In db.TeamMembers.Where(Function(x) x.Effective <= s.Game.Night.Scheduled AndAlso x.PlayerID = s.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1).DefaultIfEmpty()
+                         Select New With {.Score = s, .Team = tm.Team}
+
+            Dim MaxedGames = result.ToList.Select(Function(x) New With {.Player = x.Score.Player, .Game = x.Score.Game, .Score = Math.Min(x.Score.Game.MaxScore, x.Score.RawScore + x.Score.BonusScore), .Team = x.Team})
+
+            Dim Nights = MaxedGames.GroupBy(Function(mg) New With {Key mg.Player, Key mg.Game.Night}).
+                Select(Function(grp) New With {.Player = grp.Key.Player, .Night = grp.Key.Night, .TotalScore = grp.Sum(Function(s) s.Score), grp.FirstOrDefault.Team})
+
+            Dim ts = GetTeamScores()
+
+            Dim joined = From n In Nights
+                         From t In ts.Where(Function(t) n.Night.ID = t.Night.ID AndAlso n.Team IsNot Nothing AndAlso n.Team.ID = t.Team.ID)
+                         Select New With {n.Night, n.Team, n.Player, n.TotalScore, t.Bonus}
+
+            Dim teamBonus = joined.GroupBy(Function(s) s.Player).Select(Function(s) New With {.Player = s.Key, .TeamBonus = s.Sum(Function(x) x.Bonus)})
+
+            Dim topNights = Nights.GroupBy(Function(grp) grp.Player).SelectMany(Function(p) p.OrderByDescending(Function(x) x.TotalScore).Take(8)).GroupBy(Function(s) s.Player).Select(Function(s) New With {.Player = s.Key, .TopScores = s.Sum(Function(f) Math.Min(f.Night.MaxScore, f.TotalScore))})
+
+            Dim intermed = db.Players.Include("Scores.Game.Night").ToList
+            Dim viewResult As IEnumerable(Of PlayerView)
+
+            Dim th = db.TopHands
+
+
+
+            viewResult = intermed.Select(Function(p) New PlayerView With {
+                                             .Player = p,
+                                             .Top8 = topNights.Where(Function(x) x.Player.ID = p.ID).Sum(Function(x) x.TopScores),
+                                             .Rank = topNights.Count(Function(i) i.TopScores > .Top8) + 1,
+                                             .TeamBonus = teamBonus.Where(Function(x) x.Player.ID = p.ID).Sum(Function(x) x.TeamBonus),
+                                             .TopHands = th.Where(Function(x) x.PlayerID = p.ID).Count(),
+                                             .Attendance = p.Scores.Select(Function(s) s.Game.Night).Distinct().Count()})
 
             Select Case sortOrder
                 Case "name"
-                    result = result.OrderBy(Function(m) m.Player.PublicName)
+                    viewResult = viewResult.OrderBy(Function(m) m.Player.PublicName)
                 Case "gross"
-                    result = result.OrderBy(Function(m) m.Player.GetTopScores(25) + m.Player.GetTeamBonus + m.Player.GetTopHands)
+                    viewResult = viewResult.OrderBy(Function(m) m.Top8 + m.TeamBonus + m.TopHands)
                 Case "top"
-                    result = result.OrderBy(Function(m) m.Player.GetTopScores(25))
+                    viewResult = viewResult.OrderBy(Function(m) m.Top8)
                 Case "attend"
-                    result = result.OrderBy(Function(m) m.Player.GetNights.Count)
+                    viewResult = viewResult.OrderBy(Function(m) m.Attendance)
                 Case "tophands"
-                    result = result.OrderBy(Function(m) m.Player.GetTopHands)
+                    viewResult = viewResult.OrderBy(Function(m) m.TopHands)
                 Case "teambonus"
-                    result = result.OrderBy(Function(m) m.Player.GetTeamBonus)
+                    viewResult = viewResult.OrderBy(Function(m) m.TeamBonus)
                 Case Else
-                    result = result.OrderBy(Function(m) m.Player.PublicName)
+                    viewResult = viewResult.OrderBy(Function(m) m.Player.PublicName)
             End Select
-            If Desc Then result = result.Reverse
+            If Desc Then viewResult = viewResult.Reverse
             ViewBag.sortOrder = If(sortOrder, "name")
             ViewBag.Desc = If(Desc, False)
+            Return View(viewResult)
+        End Function
+        Function GetTeamScores() As List(Of TeamTableView)
 
-            Return View(result)
+            Dim Scores = New Dictionary(Of Integer, Double)() From {{3, 5.0F}, {2, 4.0F}, {1, 2.75F}, {0, 1.5F}}
+
+            Dim result = From s In db.Scores.Include("Game.Night")
+                         From tm In db.TeamMembers.Where(Function(x) x.Effective <= s.Game.Night.Scheduled AndAlso x.PlayerID = s.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1)
+                         Select New With {s, tm.Team}
+
+            Dim teamScores = result.Where(Function(r) r.s.Game.TeamGame AndAlso r.Team IsNot Nothing).GroupBy(Function(r) New With {r.s.Game.Night, r.Team}).ToList()
+
+            Dim teamTable = teamScores.Select(Function(r) New With
+                                                  {r.Key.Night, r.Key.Team,
+                                                  .attendance = r.Select(Function(s) s.s.PlayerID).Distinct.Count(),
+                                                  .score = r.Sum(Function(s) s.s.RawScore + s.s.BonusScore),
+                                                  .TeamScore = .score / .attendance + .attendance})
+
+            Dim Ranked = teamTable.OrderBy(Function(r) r.TeamScore).Select(Function(r) New With {
+                                                                             r.Night,
+                                                                             r.Team,
+                                                                             r.TeamScore,
+                                                                             r.attendance,
+                                                                             .GrossScore = r.score,
+                                                                             .bonus = Scores.Where(Function(y) y.Key >= teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore < r.TeamScore) AndAlso y.Key < teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore < r.TeamScore) + teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore = r.TeamScore)).Sum(Function(y) y.Value) / teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore = r.TeamScore)
+                                                                               }).
+                                                                             OrderBy(Function(x) x.Night.Scheduled).ThenBy(Function(x) x.bonus)
+            Dim output As New List(Of TeamTableView)
+
+            Ranked.ToList.ForEach(Sub(x)
+                                      output.Add(New TeamTableView With {.Attendance = x.attendance, .Bonus = x.bonus, .GrossScore = x.GrossScore, .Night = x.Night, .Team = x.Team, .TeamScore = x.TeamScore})
+                                  End Sub)
+
+
+            Return output
         End Function
 
         ' GET: Players/Details/5

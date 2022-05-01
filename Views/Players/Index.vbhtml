@@ -96,11 +96,11 @@ End Code
 
     </td>
     <td>
-        @item.Player.GetTopScores(25)
+        @item.Top8
 
     </td>
     <td>
-        @item.Player.GetTopHands()
+        @item.TopHands()
 
     </td>
     <td>
@@ -109,11 +109,11 @@ End Code
 
     </td>
     <td>
-        @(item.Player.GetTopScores(25) + item.TeamBonus + item.Player.GetTopHands)
+        @(item.Top8 + item.TeamBonus + item.TopHands)
 
     </td>
     <td>
-        @item.Player.GetNights.Count
+        @item.Attendance
 
     </td>
     <td>
