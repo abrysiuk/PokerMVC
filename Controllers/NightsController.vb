@@ -35,7 +35,7 @@ Namespace Controllers
             Dim players = vm.Night.Games.SelectMany(Function(g) g.Scores.Select(Function(s) s.Player)).Distinct.OrderByDescending(Function(p) p.GetScore(vm.Night)).ThenByDescending(Function(p) p.GetRawScore(vm.Night)).ThenByDescending(Function(p) p.GetNights.Count).ThenBy(Function(x) rand.Next)
             Dim result = players.Select(Function(p) New PlayerView With {.Player = p, .Rank = players.Count(Function(i) i.GetScore(vm.Night) > p.GetScore(vm.Night)) + 1})
             vm.Players = result
-            vm.Teams = db.Teams
+            vm.Teams = db.Teams.ToList().Where(Function(t) t.GetTeamBonus(vm.Night) > 0)
             vm.TopHands = db.TopHands.Where(Function(th) th.NightID = id)
             Return View(vm)
         End Function

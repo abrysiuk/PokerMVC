@@ -23,7 +23,7 @@ End Code
         Next
         <th>Gross Team Score</th>
         <th>Total Bonus Points</th>
-        <th></th>
+        @*<th></th>*@
     </tr>
 
 @For Each item In Model.Teams
@@ -44,9 +44,9 @@ End Code
     <td>
             @String.Format("{0:0.00}", item.GetTeamBonus)
     </td>
-        <td>
-            @Html.ActionLink("Details", "Details", New With {.id = item.ID})
-        </td>
+        @*<td>
+            @Html.ActionLink("Details", "Details", New With {.id = item.ID}, New With {.class = "link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"})
+        </td>*@
     </tr>
 Next
 

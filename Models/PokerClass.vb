@@ -2,7 +2,6 @@
 Imports System.Data.Entity
 Imports System.ComponentModel.DataAnnotations
 
-Imports System.Data.Entity.ModelConfiguration.Conventions
 
 Namespace Models
 
@@ -182,22 +181,17 @@ Namespace Models
         End Function
 
         Public Overridable Function GetTeamBonus(ByVal Night As Night) As Double
-            Dim nTeams = Night.GetTeams.OrderBy(Function(t) t.GetTeamScore(Night))
+            Dim nTeams = Night.GetTeams()
             If nTeams.Count = 0 OrElse Not nTeams.Contains(Me) Then Return 0
 
-            Dim tRanks = nTeams.Select(Function(t) New With {.rank = nTeams.Count(Function(x) x.GetTeamScore(Night) < t.GetTeamScore(Night)), .team = t})
-            Dim tRank = tRanks.FirstOrDefault(Function(tr) tr.team.ID = ID).rank
-            Dim eqCount = tRanks.Count(Function(t) t.rank = tRank)
+            Dim scoresEqualorGreater = nTeams.Count(Function(allTeamScores) allTeamScores.GetTeamScore(Night) >= Me.GetTeamScore(Night))
+            Dim tiedScores = nTeams.Count(Function(allTeamScores) allTeamScores.GetTeamScore(Night) = Me.GetTeamScore(Night))
 
             Dim tDec As Double = 0
 
-            Dim Scores = New Dictionary(Of Integer, Double)() From {{3, 5.0F}, {2, 4.0F}, {1, 2.75F}, {0, 1.5F}}
-
-            For i = 0 To eqCount - 1
-                tDec = tDec + Scores(tRank + i)
-            Next
-
-            tDec = tDec / eqCount
+            tDec = Scores.Where(
+                Function(value) value.Key < scoresEqualorGreater AndAlso value.Key >= scoresEqualorGreater - tiedScores).
+                Sum(Function(y) y.Value) / tiedScores
 
             Return tDec
         End Function
@@ -297,7 +291,7 @@ Namespace Models
         Public Overridable Function GetPlayerScore(ByVal Player As Player) As Double
             Return Math.Min(Player.Scores.Where(Function(s) s.Game.NightID = ID).Sum(Function(s) s.TotalScore), MaxScore)
         End Function
-        Public Overridable Function GetTeams() As ICollection(Of Team)
+        Public Overridable Function GetTeams() As IEnumerable(Of Team)
             Return Games.SelectMany(Function(g) g.Scores.Select(Function(s) s.Player.Team(Scheduled))).Distinct.Where(Function(t) t IsNot Nothing).ToList
         End Function
     End Class
@@ -351,6 +345,12 @@ Namespace Models
         Public Property NightID As Integer
         Public Overridable Property Night As Night
     End Class
+    Public Module AppDefs
+        Public Function Scores() As IEnumerable(Of KeyValuePair(Of Integer, Double))
+            Return _scores
+        End Function
+        Public ReadOnly _scores = New Dictionary(Of Integer, Double)() From {{0, 7.0F}, {1, 5.0F}, {2, 3.0F}, {3, 1.0F}}
+    End Module
 #End Region
 #Region "Notifications"
     Public Class RSVP
@@ -422,6 +422,10 @@ Namespace Models
         Public Property Attendance As Integer
         Public Property GrossScore As Double
         Public Property Bonus As Double
+
+        Public Overrides Function ToString() As String
+            Return Night.Scheduled.ToShortDateString() & " - " & Team.Name
+        End Function
 
     End Class
 

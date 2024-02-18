@@ -37,7 +37,7 @@ End Code
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
+                        <input type="submit" value="Log in" class="btn btn-secondary mt-2" />
                     </div>
                 </div>
                 <p>

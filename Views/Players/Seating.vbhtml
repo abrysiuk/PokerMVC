@@ -38,7 +38,7 @@ End Code
             <p>
                 @Html.LabelFor(Function(model) model.NoTables)
                 @Html.EditorFor(Function(model) model.NoTables) 
-                <input type = "submit" value="Generate" Class="btn btn-default" />
+                <input type = "submit" value="Generate" Class="btn btn-secondary mt-2" />
             </p>
             <Table Class="table">
                 <tr>
@@ -67,6 +67,6 @@ End Code
                     Next
 
             </Table>
-            <input type = "submit" value="Generate" Class="btn btn-default" />
+            <input type = "submit" value="Generate" Class="btn btn-secondary mt-2" />
 </div>
 End Using

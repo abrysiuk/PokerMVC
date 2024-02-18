@@ -45,15 +45,15 @@ End Code
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-offset-2 col-md-10 mt-2">
+                <input type="submit" value="Create" class="btn btn-secondary mt-2" />
             </div>
         </div>
     </div>
 End Using
 
 <div>
-    @Html.ActionLink("Back to List", "Details", "Nights", New With {.id = ViewBag.Night}, Nothing)
+    @Html.ActionLink("Back to List", "Details", "Nights", New With {.id = ViewBag.Night}, New With {.class = "link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"})
 </div>
 
 @Section Scripts 

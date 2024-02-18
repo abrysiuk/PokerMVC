@@ -47,7 +47,7 @@ End Code
         @Html.AntiForgeryToken()
 
         @<div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-secondary mt-2" /> |
             @Html.ActionLink("Back to List", "Details", "Nights", New With {.id = Model.Game.NightID}, Nothing)
         </div>
     End Using

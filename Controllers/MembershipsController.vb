@@ -40,7 +40,7 @@ Namespace Controllers
             ViewBag.PlayerID = New SelectList(db.Players, "ID", "Fullname", PlayerID).OrderBy(Function(s) s.Text)
             ViewBag.TeamID = New SelectList(db.Teams, "ID", "Name", TeamID)
             Dim NewMember = New MembershipCreateHelper
-            NewMember.Membership = New Membership With {.Effective = If(EffectiveDate, New Date(Today.Year, Today.Month, 1))}
+            NewMember.Membership = New Membership With {.Effective = If(EffectiveDate, Today)}
             NewMember.Guest = Guest
             Return View(NewMember)
         End Function
@@ -52,6 +52,10 @@ Namespace Controllers
         <Authorize(Roles:="Admin")>
         <ValidateAntiForgeryToken()>
         Function Create(<Bind(Include:="membership, membership.PlayerID, membership.TeamID, membership.Effective,Guest")> ByVal newMembership As MembershipCreateHelper) As ActionResult
+            If db.TeamMembers.Any(Function(x) x.PlayerID = newMembership.Membership.PlayerID And x.Effective = newMembership.Membership.Effective) Then
+                ModelState.AddModelError("Membership.Effective", "A team entry already exists for this player and night")
+            End If
+
             If ModelState.IsValid Then
                 db.TeamMembers.Add(newMembership.Membership)
                 If newMembership.Guest Then

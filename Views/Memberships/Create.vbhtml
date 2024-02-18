@@ -5,17 +5,18 @@ End Code
 
 <h2>Create</h2>
 
-@Using (Html.BeginForm()) 
+@Using (Html.BeginForm())
     @Html.AntiForgeryToken()
-    
+
     @<div class="form-horizontal">
         <h4>Membership</h4>
         <hr />
-        @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
+        @Html.ValidationSummary(True, "", New With {.class = "text-danger"})
         <div class="form-group">
             @Html.LabelFor(Function(model) model.Membership.PlayerID, "Player", htmlAttributes:=New With {.class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.DropDownListFor(Function(model) model.Membership.PlayerID, CType(ViewBag.PlayerID, IEnumerable(Of SelectListItem)), New With {.class = "form-control"})
+                @*@Html.DropDownList("PlayerID", Nothing, "-Select Player-", htmlAttributes:=New With {.class = "form-control", .autofocus = "autofocus"})*@
+                @Html.DropDownListFor(Function(model) model.Membership.PlayerID, CType(ViewBag.PlayerID, IEnumerable(Of SelectListItem)), "--Select Player--", New With {.class = "form-control", .autofocus = "autofocus"})
                 @Html.ValidationMessageFor(Function(model) model.Membership.PlayerID, "", New With {.class = "text-danger"})
             </div>
         </div>
@@ -45,11 +46,10 @@ End Code
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-secondary mt-2" />
             </div>
         </div>
-    </div>
-End Using
+    </div>  End Using
 
 <div>
     @Html.ActionLink("Back to List", "Index")

@@ -79,7 +79,7 @@ End Code
     </table>
 </div>
 <p>
-    @IIf(User.Identity.IsAuthenticated AndAlso User.IsInRole("Admin"), Html.ActionLink("Edit", "Edit", New With {.id = Model.ID}), "") 
+    @IIf(User.Identity.IsAuthenticated AndAlso User.IsInRole("Admin"), Html.ActionLink("Edit", "Edit", New With {.id = Model.ID}, New With {.class = "link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"}), "") 
     @IIf(User.Identity.IsAuthenticated AndAlso User.IsInRole("Admin"), " | ", "")
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", Nothing, New With {.class = "link-body-emphasis link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"})
 </p>

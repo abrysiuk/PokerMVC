@@ -18,7 +18,7 @@ Namespace Controllers
 
         ' GET: Players
         Function Index(ByVal sortOrder As String, ByVal Desc As Boolean?) As ActionResult
-
+            'TODO Cleanup and get rid of anything pulling the team forward. Make better.
 
             Dim result = From s In db.Scores.Include("Game.Night")
                          From tm In db.TeamMembers.Where(Function(x) x.Effective <= s.Game.Night.Scheduled AndAlso x.PlayerID = s.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1).DefaultIfEmpty()
@@ -39,7 +39,7 @@ Namespace Controllers
 
             Dim topNights = Nights.GroupBy(Function(grp) grp.Player).SelectMany(Function(p) p.OrderByDescending(Function(x) x.TotalScore).Take(8)).GroupBy(Function(s) s.Player).Select(Function(s) New With {.Player = s.Key, .TopScores = s.Sum(Function(f) Math.Min(f.Night.MaxScore, f.TotalScore))})
 
-            Dim intermed = db.Players.Include("Scores.Game.Night").ToList
+            Dim intermed = db.Players.Include("Scores.Game.Night").Where(Function(p) p.Scores.Count > 0).ToList
             Dim viewResult As IEnumerable(Of PlayerView)
 
             Dim th = db.TopHands
@@ -77,39 +77,44 @@ Namespace Controllers
         End Function
         Function GetTeamScores() As List(Of TeamTableView)
 
-            Dim Scores = New Dictionary(Of Integer, Double)() From {{3, 5.0F}, {2, 4.0F}, {1, 2.75F}, {0, 1.5F}}
+            'Select all scores and join it based on a subquery to team members to get the most recent team assignment on or nefore the night of the score - therefore assigning a team to each score.
+            Dim results = From score In db.Scores.Include("Game.Night")
+                          From tm In db.TeamMembers.Where(Function(x) x.Effective <= score.Game.Night.Scheduled AndAlso x.PlayerID = score.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1)
+                          Where tm.Team IsNot Nothing AndAlso score.Game.TeamGame
+                          Order By score.Game.Night.Scheduled, score.Player.FirstName
+                          Select New With {score, tm.Team}
 
-            Dim result = From s In db.Scores.Include("Game.Night")
-                         From tm In db.TeamMembers.Where(Function(x) x.Effective <= s.Game.Night.Scheduled AndAlso x.PlayerID = s.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1)
-                         Select New With {s, tm.Team}
+            'Group by night and team
+            Dim teamScores = results.GroupBy(Function(result) New With {result.score.Game.Night, result.Team}).ToList()
 
-            Dim teamScores = result.Where(Function(r) r.s.Game.TeamGame AndAlso r.Team IsNot Nothing).GroupBy(Function(r) New With {r.s.Game.Night, r.Team}).ToList()
-
-            Dim teamTable = teamScores.Select(Function(r) New With
-                                                  {r.Key.Night, r.Key.Team,
-                                                  .attendance = r.Select(Function(s) s.s.PlayerID).Distinct.Count(),
-                                                  .score = r.Sum(Function(s) s.s.RawScore + s.s.BonusScore),
+            'Cast to an anonymous that sums the gross scores, counts the attendance and calculates net team scores for the night.
+            Dim teamTable = teamScores.Select(Function(ResultGroup) New With
+                                                  {ResultGroup.Key.Night, ResultGroup.Key.Team,
+                                                  .attendance = ResultGroup.Select(Function(s) s.score.PlayerID).Distinct.Count(),
+                                                  .score = ResultGroup.Sum(Function(s) s.score.RawScore + s.score.BonusScore),
                                                   .TeamScore = .score / .attendance + .attendance})
 
-            Dim Ranked = teamTable.OrderBy(Function(r) r.TeamScore).Select(Function(r) New With {
-                                                                             r.Night,
-                                                                             r.Team,
-                                                                             r.TeamScore,
-                                                                             r.attendance,
-                                                                             .GrossScore = r.score,
-                                                                             .bonus = Scores.Where(Function(y) y.Key >= teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore < r.TeamScore) AndAlso y.Key < teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore < r.TeamScore) + teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore = r.TeamScore)).Sum(Function(y) y.Value) / teamTable.Count(Function(x) x.Night.ID = r.Night.ID AndAlso x.TeamScore = r.TeamScore)
-                                                                               }).
-                                                                             OrderBy(Function(x) x.Night.Scheduled).ThenBy(Function(x) x.bonus)
-            Dim output As New List(Of TeamTableView)
-
-            Ranked.ToList.ForEach(Sub(x)
-                                      output.Add(New TeamTableView With {.Attendance = x.attendance, .Bonus = x.bonus, .GrossScore = x.GrossScore, .Night = x.Night, .Team = x.Team, .TeamScore = x.TeamScore})
-                                  End Sub)
-
-
-            Return output
+            'Draw owl. Case the aforementioned into a TeamTableView, calculating the bonus along the way. Bonus looks up index 0-3 based on how many teams did better.
+            Dim Ranked = teamTable.
+                Select(Function(thisTeamScore)
+                           'Find how many scores are equal to or bigger than my score (include my score) and count how many are tied with me
+                           Dim scoresEqualorGreater = teamTable.Count(Function(allTeamScores) allTeamScores.Night.ID = thisTeamScore.Night.ID AndAlso allTeamScores.TeamScore >= thisTeamScore.TeamScore)
+                           Dim tiedScores = teamTable.Count(Function(allTeamScores) allTeamScores.Night.ID = thisTeamScore.Night.ID AndAlso allTeamScores.TeamScore = thisTeamScore.TeamScore)
+                           'Lookup .bonus against static table - grab every index less than teams that did better than me (includes myself) andalso
+                           'is greater than (or usually equal to) the number of teams that did better than me, less those that got the same as me (probably 1. So if no one did better than me, index calculates 0 = 1 (me) - 1 (me))
+                           Return New TeamTableView With {
+                            .Night = thisTeamScore.Night,
+                            .Team = thisTeamScore.Team,
+                            .TeamScore = thisTeamScore.TeamScore,
+                            .Attendance = thisTeamScore.attendance,
+                            .GrossScore = thisTeamScore.score,
+                            .Bonus = Scores.
+                                    Where(Function(lookup) lookup.Key < scoresEqualorGreater AndAlso lookup.Key >= scoresEqualorGreater - tiedScores).
+                                    Sum(Function(lookup) lookup.Value) / tiedScores
+                            }
+                       End Function)
+            Return Ranked.ToList
         End Function
-
         ' GET: Players/Details/5
         Function Details(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then

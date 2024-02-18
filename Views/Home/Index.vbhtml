@@ -4,8 +4,8 @@
 End Code
 
 <div class="jumbotron">
-    <h1>Ministry Poker</h1>
-    <p class="lead">Taking the gambling out of poker to encourage clean fellowship between men.</p>
+    
+    <p class="lead">Taking the gambling out of poker to encourage fellowship.</p>
     <p>
         Next Scheduled Game: <strong>@(If(Model.NextNight IsNot Nothing, Model.NextNight.Scheduled.ToLongDateString(), "Unscheduled"))</strong>
     </p>
@@ -13,7 +13,7 @@ End Code
 
 <div Class="row">
     <div Class="col-md-4">
-        <h2> Teams</h2>
+        <h2>@Html.ActionLink("Teams", "Index", "Teams", Nothing, New With {.class = "btn btn-secondary mt-2"})</h2>
         <Table Class="table">
             <tr>
                 <th> Team</th>
@@ -28,7 +28,7 @@ End Code
         </Table>
     </div>
     <div Class="col-md-4">
-        <h2>Top 9 Overall</h2>
+        <h2>@Html.ActionLink("Top 9 Overall", "Index", "Players", Nothing, New With {.class = "btn btn-secondary mt-2"})</h2>
         <table class="table">
             <tr>
                 <th>Player</th>
@@ -41,12 +41,12 @@ End Code
                 </td>
                 <td>@player.GetTopScores(25)</td>
             </tr>
-        Next
+            Next
         </table>
     </div>
     @If Model.LastWeek IsNot Nothing Then
         @<div Class="col-md-4">
-            <h2> Top 9 Last Week</h2>
+            <h2> @Html.ActionLink("Top 9 Last Week", "Details", "Nights", New With {.ID = Model.LastWeek.ID}, New With {.class = "btn btn-secondary mt-2"})</h2>
             <table class="table">
                 <tr>
                     <th>Player</th>
