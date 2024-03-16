@@ -18,13 +18,12 @@ Namespace Controllers
 
         ' GET: Players
         Function Index(ByVal sortOrder As String, ByVal Desc As Boolean?) As ActionResult
-            'TODO Cleanup and get rid of anything pulling the team forward. Make better.
 
             Dim result = From s In db.Scores.Include("Game.Night")
                          From tm In db.TeamMembers.Where(Function(x) x.Effective <= s.Game.Night.Scheduled AndAlso x.PlayerID = s.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1).DefaultIfEmpty()
                          Select New With {.Score = s, .Team = tm.Team}
 
-            Dim MaxedGames = result.ToList.Select(Function(x) New With {.Player = x.Score.Player, .Game = x.Score.Game, .Score = Math.Min(x.Score.Game.MaxScore, x.Score.RawScore + x.Score.BonusScore), .Team = x.Team})
+            Dim MaxedGames = result.ToList.Select(Function(x) New With {x.Score.Player, x.Score.Game, .Score = Math.Min(x.Score.Game.MaxScore, x.Score.RawScore + x.Score.BonusScore), x.Team})
 
             Dim Nights = MaxedGames.GroupBy(Function(mg) New With {Key mg.Player, Key mg.Game.Night}).
                 Select(Function(grp) New With {.Player = grp.Key.Player, .Night = grp.Key.Night, .TotalScore = grp.Sum(Function(s) s.Score), grp.FirstOrDefault.Team})
@@ -39,7 +38,14 @@ Namespace Controllers
 
             Dim topNights = Nights.GroupBy(Function(grp) grp.Player).SelectMany(Function(p) p.OrderByDescending(Function(x) x.TotalScore).Take(8)).GroupBy(Function(s) s.Player).Select(Function(s) New With {.Player = s.Key, .TopScores = s.Sum(Function(f) Math.Min(f.Night.MaxScore, f.TotalScore))})
 
-            Dim intermed = db.Players.Include("Scores.Game.Night").Where(Function(p) p.Scores.Count > 0).ToList
+            Dim intermed As List(Of Player)
+
+            If User.IsInRole("Admin") Then
+                intermed = db.Players.ToList
+            Else
+                intermed = db.Players.Where(Function(p) p.Scores.Count > 0).ToList
+            End If
+
             Dim viewResult As IEnumerable(Of PlayerView)
 
             Dim th = db.TopHands
@@ -77,7 +83,7 @@ Namespace Controllers
         End Function
         Function GetTeamScores() As List(Of TeamTableView)
 
-            'Select all scores and join it based on a subquery to team members to get the most recent team assignment on or nefore the night of the score - therefore assigning a team to each score.
+            'Select all scores and join it based on a subquery to team members to get the most recent team assignment on or before the night of the score - therefore assigning a team to each score.
             Dim results = From score In db.Scores.Include("Game.Night")
                           From tm In db.TeamMembers.Where(Function(x) x.Effective <= score.Game.Night.Scheduled AndAlso x.PlayerID = score.PlayerID).OrderByDescending(Function(x) x.Effective).Take(1)
                           Where tm.Team IsNot Nothing AndAlso score.Game.TeamGame
